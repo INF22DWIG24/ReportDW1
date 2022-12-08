@@ -1,5 +1,5 @@
 'use strict';
-
+var sql = require('../utils/db.js');
 
 /**
  * Create Aluno
@@ -9,16 +9,8 @@
  **/
 exports.createAluno = function(body) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome",
-  "disciplina_id" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    console.log(body);
+    resolver();
   });
 }
 
@@ -44,16 +36,7 @@ exports.deleteAluno = function(id) {
  **/
 exports.retrieveAluno = function(id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome",
-  "disciplina_id" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    resolve();
   });
 }
 
@@ -65,19 +48,7 @@ exports.retrieveAluno = function(id) {
  **/
 exports.retrieveAlunos = function() {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "nome" : "nome",
-  "disciplina_id" : 0
-}, {
-  "nome" : "nome",
-  "disciplina_id" : 0
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    resolve()
   });
 }
 

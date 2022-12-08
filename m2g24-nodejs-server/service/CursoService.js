@@ -9,16 +9,7 @@
  **/
 exports.createCurso = function(body) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome",
-  "nrAnos" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    resolve()
   });
 }
 
@@ -30,18 +21,10 @@ exports.createCurso = function(body) {
  * id Long 
  * returns Curso
  **/
-exports.createdisciplina by curso = function(body,id) {
+exports.createdisciplina_by_curso = function(body,id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome",
-  "nrAnos" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    console.log(body);
+    resolve();
   });
 }
 
@@ -67,16 +50,7 @@ exports.deleteCurso = function(id) {
  **/
 exports.retrieveCurso = function(id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome",
-  "nrAnos" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    resolve();
   });
 }
 
@@ -88,19 +62,7 @@ exports.retrieveCurso = function(id) {
  **/
 exports.retrieveCursos = function() {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "nome" : "nome",
-  "nrAnos" : 0
-}, {
-  "nome" : "nome",
-  "nrAnos" : 0
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    resolve()
   });
 }
 

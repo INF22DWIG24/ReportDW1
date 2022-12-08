@@ -362,7 +362,7 @@ paths:
       tags:
       - Curso
       summary: Create disciplina by curso
-      operationId: createdisciplina by curso
+      operationId: createdisciplina_by_curso
       parameters:
       - name: id
         in: path

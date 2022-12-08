@@ -13,8 +13,8 @@ module.exports.createCurso = function createCurso (req, res, next, body) {
     });
 };
 
-module.exports.createdisciplina by curso = function createdisciplina by curso (req, res, next, body, id) {
-  Curso.createdisciplina by curso(body, id)
+module.exports.createdisciplina_by_curso = function createdisciplina_by_curso (req, res, next, body, id) {
+  Curso.createdisciplina_by_curso(body, id)
     .then(function (response) {
       utils.writeJson(res, response);
     })
