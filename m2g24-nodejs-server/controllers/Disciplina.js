@@ -23,8 +23,8 @@ module.exports.deleteDisciplina = function deleteDisciplina (req, res, next, id)
     });
 };
 
-module.exports.retrieveCursoAlunos = function retrieveCursoAlunos (req, res, next, id) {
-  Disciplina.retrieveCursoAlunos(id)
+module.exports.retrieveDisciplinaAlunos = function retrieveDisciplinaAlunos (req, res, next, id) {
+  Disciplina.retrieveDisciplinaAlunos(id)
     .then(function (response) {
       utils.writeJson(res, response);
     })

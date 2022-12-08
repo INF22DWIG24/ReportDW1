@@ -10,7 +10,16 @@ var sql = require('../utils/db.js');
 exports.createAluno = function(body) {
   return new Promise(function(resolve, reject) {
     console.log(body);
-    resolver();
+    sql.query("INSERT INTO aluno (nome, disciplina_id) values (?, ?)", [body.nome, body.disciplina_id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res.insertID);
+        resolve (res.insertID);
+      }
+    });
   });
 }
 
@@ -23,7 +32,17 @@ exports.createAluno = function(body) {
  **/
 exports.deleteAluno = function(id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    sql.query("DELETE FROM aluno where id = ?", [id], function(err, res) {
+      if (err || !res.affectedRows){
+        console.log(err);
+        console.log(res);
+        reject();
+      }
+      else{
+        console.log(res);
+        resolve({"deleted":id});
+      }
+    });
   });
 }
 
@@ -36,7 +55,16 @@ exports.deleteAluno = function(id) {
  **/
 exports.retrieveAluno = function(id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    sql.query("SELECT * FROM aluno WHERE id = ?", [id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res[0]);
+      }
+    });
   });
 }
 
@@ -48,7 +76,16 @@ exports.retrieveAluno = function(id) {
  **/
 exports.retrieveAlunos = function() {
   return new Promise(function(resolve, reject) {
-    resolve()
+    sql.query("SELECT * FROM aluno", function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res);
+      }
+    });
   });
 }
 
@@ -62,7 +99,17 @@ exports.retrieveAlunos = function() {
  **/
 exports.updateAluno = function(body,id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    console.log(body);
+    sql.query("UPDATE aluno set nome = ?, disciplina_id = ? where id = ?", [body.nome, body.disciplina_id, id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(id);
+      }
+    });
   });
 }
 

@@ -1,5 +1,5 @@
 'use strict';
-
+var sql = require('../utils/db.js');
 
 /**
  * Create Professor
@@ -9,15 +9,17 @@
  **/
 exports.createProfessor = function(body) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    console.log(body);
+    sql.query("INSERT INTO professor (nome) values (?)", [body.nome], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res.insertID);
+        resolve (res.insertID);
+      }
+    });
   });
 }
 
@@ -30,7 +32,17 @@ exports.createProfessor = function(body) {
  **/
 exports.deleteProfessor = function(id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    sql.query("DELETE FROM professor where id = ?", [id], function(err, res) {
+      if (err || !res.affectedRows){
+        console.log(err);
+        console.log(res);
+        reject();
+      }
+      else{
+        console.log(res);
+        resolve({"deleted":id});
+      }
+    });
   });
 }
 
@@ -43,15 +55,16 @@ exports.deleteProfessor = function(id) {
  **/
 exports.retrieveProfessor = function(id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "nome" : "nome"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    sql.query("SELECT * FROM professor WHERE id = ?", [id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res[0]);
+      }
+    });
   });
 }
 
@@ -63,17 +76,16 @@ exports.retrieveProfessor = function(id) {
  **/
 exports.retrieveProfessores = function() {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "nome" : "nome"
-}, {
-  "nome" : "nome"
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    sql.query("SELECT * FROM professor", function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res);
+      }
+    });
   });
 }
 
@@ -87,7 +99,17 @@ exports.retrieveProfessores = function() {
  **/
 exports.updateProfessor = function(body,id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    console.log(body);
+    sql.query("UPDATE professor set nome = ? where id = ?", [body.nome, id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(id);
+      }
+    });
   });
 }
 

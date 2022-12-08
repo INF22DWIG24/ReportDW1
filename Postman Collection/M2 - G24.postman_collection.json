@@ -1,0 +1,2847 @@
+{
+	"info": {
+		"_postman_id": "e7882c2e-5459-480c-9590-9f55d5861c12",
+		"name": "M2 - G24",
+		"description": "Gestão Escolar\n\nContact Support:\n Name: M2 - G24\n Email: a039738@umaia.pt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23525842"
+	},
+	"item": [
+		{
+			"name": "disciplina",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve disciplina",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/disciplina/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Disciplina",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/disciplina/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Disciplina",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/disciplina/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Retrieve disciplina alunos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/disciplina/:id/alunos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina",
+										":id",
+										"alunos"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Array of alunos instances",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id/alunos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id",
+												"alunos"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"ano\": 2000,\n    \"curso_id\": 0,\n    \"nome\": \"nome\",\n    \"professor_id\": 0,\n    \"id\": 0\n  },\n  {\n    \"ano\": 2000,\n    \"curso_id\": 0,\n    \"nome\": \"nome\",\n    \"professor_id\": 0,\n    \"id\": 0\n  }\n]"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id/alunos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id",
+												"alunos"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id/alunos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id",
+												"alunos"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/disciplina/:id/alunos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"disciplina",
+												":id",
+												"alunos"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve all disciplinas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/disciplina",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"disciplina"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Return all disciplinas from the database.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/disciplina",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"ano\": 2000,\n    \"curso_id\": 0,\n    \"nome\": \"nome\",\n    \"professor_id\": 0,\n    \"id\": 0\n  },\n  {\n    \"ano\": 2000,\n    \"curso_id\": 0,\n    \"nome\": \"nome\",\n    \"professor_id\": 0,\n    \"id\": 0\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create disciplina",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/disciplina",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"disciplina"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Disciplina model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/disciplina",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"disciplina"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"ano\": 2000,\n  \"curso_id\": 0,\n  \"nome\": \"nome\",\n  \"professor_id\": 0,\n  \"id\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "curso",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve curso",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/curso/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Curso",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/curso/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Curso",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/curso/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create disciplina by curso",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/curso/:id/disciplina",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso",
+										":id",
+										"disciplina"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "15475322",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create a Disciplina model instances",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id/disciplina",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id",
+												"disciplina"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "15475322",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id/disciplina",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id",
+												"disciplina"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "15475322",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/curso/:id/disciplina",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"curso",
+												":id",
+												"disciplina"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "15475322",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Curso",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/curso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"curso"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of curso model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/curso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"nome\": \"nome\",\n    \"nrAnos\": 0\n  },\n  {\n    \"nome\": \"nome\",\n    \"nrAnos\": 0\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/curso",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"curso"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Curso model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/curso",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"curso"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"nome\": \"nome\",\n  \"nrAnos\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "professor",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve Professor",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/professor/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"professor",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"nome\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Professor",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/professor/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"professor",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Professor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/professor/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"professor",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/professor/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"professor",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Professores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/professor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"professor"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Professor model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/professor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"professor"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"nome\": \"nome\"\n  },\n  {\n    \"nome\": \"nome\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Professor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"nome\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/professor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"professor"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Professor model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/professor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"professor"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"nome\": \"nome\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "aluno",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve Aluno",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/aluno/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"aluno",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Aluno",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/aluno/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"aluno",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Aluno",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/aluno/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"aluno",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Alunos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/aluno",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"aluno"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Aluno model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/aluno",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"aluno"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"nome\": \"nome\",\n    \"disciplina_id\": 0\n  },\n  {\n    \"nome\": \"nome\",\n    \"disciplina_id\": 0\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Aluno",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/aluno",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"aluno"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Aluno model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/aluno",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"aluno"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"nome\": \"nome\",\n  \"disciplina_id\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "basePath",
+			"value": "/",
+			"type": "any"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

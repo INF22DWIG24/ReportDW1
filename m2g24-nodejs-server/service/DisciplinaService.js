@@ -1,5 +1,5 @@
 'use strict';
-
+var sql = require('../utils/db.js');
 
 /**
  * Create disciplina
@@ -9,19 +9,17 @@
  **/
 exports.createdisciplina = function(body) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    console.log(body);
+    sql.query("INSERT INTO disciplina (ano, curso_id, nome, professor_id) values (?, ?, ?, ?)", [body.ano, body.curso_id, body.nome, body.professor_id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res.insertID);
+        resolve (res.insertID);
+      }
+    });
   });
 }
 
@@ -34,7 +32,17 @@ exports.createdisciplina = function(body) {
  **/
 exports.deleteDisciplina = function(id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    sql.query("DELETE FROM disciplina where id = ?", [id], function(err, res) {
+      if (err || !res.affectedRows){
+        console.log(err);
+        console.log(res);
+        reject();
+      }
+      else{
+        console.log(res);
+        resolve({"deleted":id});
+      }
+    });
   });
 }
 
@@ -45,27 +53,18 @@ exports.deleteDisciplina = function(id) {
  * id Long 
  * returns List
  **/
-exports.retrieveCursoAlunos = function(id) {
+exports.retrieveDisciplinaAlunos = function(id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-}, {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    sql.query("SELECT * FROM aluno WHERE disciplina_id = ?", [id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res[0]);
+      }
+    });
   });
 }
 
@@ -78,19 +77,16 @@ exports.retrieveCursoAlunos = function(id) {
  **/
 exports.retrieveDisciplina = function(id) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    sql.query("SELECT * FROM disciplina WHERE id = ?", [id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res[0]);
+      }
+    });
   });
 }
 
@@ -102,25 +98,16 @@ exports.retrieveDisciplina = function(id) {
  **/
 exports.retrieveDisciplinas = function() {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-}, {
-  "ano" : 2000,
-  "curso_id" : 0,
-  "nome" : "nome",
-  "professor_id" : 0,
-  "id" : 0
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
+    sql.query("SELECT * FROM disciplina", function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(res);
+      }
+    });
   });
 }
 
@@ -134,7 +121,17 @@ exports.retrieveDisciplinas = function() {
  **/
 exports.updateDisciplina = function(body,id) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    console.log(body);
+    sql.query("UPDATE disciplina set ano = ?, curso_id = ?, nome = ?, professor_id = ? where id = ?", [body.ano, body.curso_id,body.nome, body.professor_id, id], function(err, res){
+      if (err){
+        console.log(err);
+        reject(err);
+      }
+      else{
+        console.log(res);
+        resolve(id);
+      }
+    });
   });
 }
 
