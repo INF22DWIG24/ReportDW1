@@ -59,7 +59,7 @@ paths:
               $ref: '#/components/schemas/Disciplina'
       responses:
         "200":
-          description: Create a Disciplina model instances
+          description: Create a Disciplina instance
           content:
             application/json:
               schema:
@@ -158,10 +158,10 @@ paths:
           format: int64
         examples:
           one:
-            summary: DeleteDisciplina id 1
+            summary: Delete Disciplina id 1
             value: 1
           two:
-            summary: DeleteDisciplina id 2
+            summary: Delete Disciplina id 2
             value: 2
       responses:
         "204":
@@ -173,7 +173,7 @@ paths:
     get:
       tags:
       - Disciplina
-      summary: Retrieve disciplina alunos
+      summary: Retrieve alunos by id
       operationId: retrieveDisciplinaAlunos
       parameters:
       - name: id
@@ -247,7 +247,7 @@ paths:
               $ref: '#/components/schemas/Curso'
       responses:
         "200":
-          description: Create a Curso model instances
+          description: Create a Curso instance
           content:
             application/json:
               schema:
@@ -346,10 +346,10 @@ paths:
           format: int64
         examples:
           one:
-            summary: DeleteCurso id 1
+            summary: Delete Curso id 1
             value: 1
           two:
-            summary: DeleteCurso id 2
+            summary: Delete Curso id 2
             value: 2
       responses:
         "204":
@@ -531,10 +531,10 @@ paths:
           format: int64
         examples:
           one:
-            summary: DeleteProfessor id 1
+            summary: Delete Professor id 1
             value: 1
           two:
-            summary: DeleteProfessor id 2
+            summary: Delete Professor id 2
             value: 2
       responses:
         "204":
@@ -680,10 +680,10 @@ paths:
           format: int64
         examples:
           one:
-            summary: DeleteAluno id 1
+            summary: Delete Aluno id 1
             value: 1
           two:
-            summary: DeleteAluno id 2
+            summary: Delete Aluno id 2
             value: 2
       responses:
         "204":
