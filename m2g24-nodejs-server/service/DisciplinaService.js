@@ -62,7 +62,7 @@ exports.retrieveDisciplinaAlunos = function(id) {
       }
       else{
         console.log(res);
-        resolve(res[0]);
+        resolve(res);
       }
     });
   });
