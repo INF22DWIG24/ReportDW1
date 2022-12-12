@@ -786,6 +786,7 @@ components:
       title: Aluno
       required:
       - disciplina_id
+      - n_aluno
       - nome
       type: object
       properties:
@@ -794,6 +795,8 @@ components:
           format: int64
         nome:
           type: string
+        n_aluno:
+          type : string
         disciplina_id:
           type: integer
           format: int64
