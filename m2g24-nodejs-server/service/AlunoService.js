@@ -100,7 +100,7 @@ exports.retrieveAlunos = function() {
 exports.updateAluno = function(body,id) {
   return new Promise(function(resolve, reject) {
     console.log(body);
-    sql.query("UPDATE aluno set nome = ?, disciplina_id = ? where id = ?", [body.nome, body.disciplina_id, id], function(err, res){
+    sql.query("UPDATE aluno set nome = ?, n_aluno = ?, disciplina_id = ? where id = ?", [body.nome, body.n_aluno, body.disciplina_id, id], function(err, res){
       if (err){
         console.log(err);
         reject(err);
