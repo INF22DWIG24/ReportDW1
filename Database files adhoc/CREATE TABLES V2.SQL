@@ -1,3 +1,4 @@
+create schema school;
 use school;
 create table professor (
 `id` bigint NOT NULL AUTO_INCREMENT,
