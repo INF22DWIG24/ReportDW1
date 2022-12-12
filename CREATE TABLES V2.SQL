@@ -30,6 +30,7 @@ CONSTRAINT fk_cursodisc
 create table aluno (
 `id` bigint NOT NULL AUTO_INCREMENT,
 `nome` varchar(45),
+`n_aluno` varchar(7),
 `disciplina_id` bigint,
 PRIMARY KEY(`id`),
 CONSTRAINT fk_alunodisc
