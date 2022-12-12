@@ -10,7 +10,7 @@ var sql = require('../utils/db.js');
 exports.createAluno = function(body) {
   return new Promise(function(resolve, reject) {
     console.log(body);
-    sql.query("INSERT INTO aluno (nome, disciplina_id) values (?, ?)", [body.nome, body.disciplina_id], function(err, res){
+    sql.query("INSERT INTO aluno (nome, n_aluno, disciplina_id) values (?, ?)", [body.nome, body.n_aluno, body.disciplina_id], function(err, res){
       if (err){
         console.log(err);
         reject(err);
