@@ -5,6 +5,7 @@ var Disciplina = require('../service/DisciplinaService');
 
 module.exports.createdisciplina = function createdisciplina (req, res, next, body) {
   Disciplina.createdisciplina(body)
+    .then(Disciplina.createdisciplina)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -55,6 +56,7 @@ module.exports.retrieveDisciplinas = function retrieveDisciplinas (req, res, nex
 
 module.exports.updateDisciplina = function updateDisciplina (req, res, next, body, id) {
   Disciplina.updateDisciplina(body, id)
+    .then(Disciplina.updateDisciplina)
     .then(function (response) {
       utils.writeJson(res, response);
     })

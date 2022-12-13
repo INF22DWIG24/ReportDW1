@@ -5,6 +5,7 @@ var Aluno = require('../service/AlunoService');
 
 module.exports.createAluno = function createAluno (req, res, next, body) {
   Aluno.createAluno(body)
+    .then(Aluno.createAluno)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -45,6 +46,7 @@ module.exports.retrieveAlunos = function retrieveAlunos (req, res, next) {
 
 module.exports.updateAluno = function updateAluno (req, res, next, body, id) {
   Aluno.updateAluno(body, id)
+    .then(Alunos.updateAluno)
     .then(function (response) {
       utils.writeJson(res, response);
     })

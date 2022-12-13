@@ -5,6 +5,7 @@ var Professor = require('../service/ProfessorService');
 
 module.exports.createProfessor = function createProfessor (req, res, next, body) {
   Professor.createProfessor(body)
+    .then(Professor.createProfessor)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -45,6 +46,7 @@ module.exports.retrieveProfessores = function retrieveProfessores (req, res, nex
 
 module.exports.updateProfessor = function updateProfessor (req, res, next, body, id) {
   Professor.updateProfessor(body, id)
+    .then(Professor.updateProfessor)
     .then(function (response) {
       utils.writeJson(res, response);
     })
