@@ -3,7 +3,7 @@ version: '3.7'
 services:
   mysql:
     container_name: school-mysql
-    image: school-mysql
+    image: inf22dw1g24/school-mysql
     build:
       context: .
       dockerfile: ./dockerfile.mysql
@@ -18,7 +18,7 @@ services:
     depends_on:
       - mysql
     container_name: school-app
-    image: school-app
+    image: inf22dw1g24/school-app
     build:
       context: .
       dockerfile: ./dockerfile
