@@ -15,7 +15,7 @@ O tema escolhido foi a criaçao de uma API de gestão escolar básica constituid
 * **Source code** está na pasta [m2g24-nodejs-server]
 * **Postman Colection** 
 * as instruçoes de configuraçao estão na pasta [SETUP-FOLDER]
-* as imagens estão na pasta [doc/imagens]
+* as imagens estão na pasta [doc/images]
 
 
 ## Galeria
