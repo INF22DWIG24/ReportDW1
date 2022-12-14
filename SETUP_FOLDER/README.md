@@ -19,7 +19,7 @@ docker compose up
 To view the Swagger UI interface of the app:
 
 ```
-open http://localhost:8080/docs
+http://localhost:8080/docs
 ```
 --------------------------------------------------------------------------------------------------------
 
@@ -44,5 +44,5 @@ docker compose up
 Para ver a app e respetiva interface gráfica
 
 ```
-open http://localhost:8080/docs
+http://localhost:8080/docs
 ```
