@@ -1,5 +1,5 @@
 # Avaliação Contínua, Momento 2 - 2022/23
-🇵🇹
+:🇵ortugal:
 Este repositório alberga o projeto desenvolvido para a diciplina de Desenvolvimento WEB 1 do 2º ano da licenciatura de Informatica lecionada na Universidade da Maia.
 Este trabalho reporta-se ao momento de avalição designado  por M2 pelo foi desenvolvido pelo grupo G24 constituido pelo seguintes elementos:
 * Bruno Ribeiro
