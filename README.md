@@ -34,6 +34,7 @@ As imagens estão agrupadas  pelos seguintes tópicos.
 
 ### Apresentaçao do projeto
 * Capitulo 1: [Project presentation](doc/c1.md)
+* Capitulo 2: [Recursos](doc/c2.md)
 
 
 ## Equipa/Grupo
