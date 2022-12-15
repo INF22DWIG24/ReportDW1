@@ -4,4 +4,4 @@ COPY db/setup.sh .
 COPY db/database_v1.sql .
 RUN pwd && echo ""
 RUN ls -lisa && echo ""
-RUN ./setup.sh
+RUN db/setup.sh
