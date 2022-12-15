@@ -9,7 +9,7 @@ Este trabalho reporta-se ao momento de avaliação designado por M2 pelo foi des
 * Organizaçao - [inf22dw1g24](https://github.com/INF22DWIG24)
 
 ## Gestão Escolar
-O tema escolhido foi a criaçao de uma API de gestão escolar básica constituido por 4 recursos Aluno, Disciplina, Curso e Professor.  O objetivo passa por registar algumas informções básicas como os dados do aluno diciplinas em que se encontra matriculado,  o professor da diciplina e a que curso a disciplina pertence.
+O tema escolhido foi a criaçao de uma API de gestão escolar básica constituido por 4 recursos Aluno, Disciplina, Curso e Professor.  O objetivo passa por registar algumas informações básicas como os dados do aluno diciplinas em que se encontra matriculado,  o professor da disciplina e a que curso a disciplina pertence.
 
 ## Organização do repositório
 * **Source code** está na pasta [m2g24-nodejs-server]
@@ -44,8 +44,8 @@ Restantes imagens em [/doc/images/Postman](https://github.com/INF22DWIG24/Report
 
 ## Relatório
 
-### Apresentaçao do projeto
-* Capitulo 1: [Project presentation](doc/c1.md)
+### Apresentação do projeto
+* Capitulo 1: [Descrição do projeto](doc/c1.md)
 * Capitulo 2: [Recursos](doc/c2.md)
 
 
