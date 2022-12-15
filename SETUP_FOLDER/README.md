@@ -1,10 +1,10 @@
 # SETUP
 
 ## Overview
-This document serves as an aid to run the app through docker images available in Docker Hub
+This document serves as an aid to run the app through the docker images available in Docker Hub
 
 ### First Setup
-Initialize Docker - if Docker Desktop is installed, it can simply open
+Initialize Docker - if Docker Desktop is installed, you can simply open
 
 ###
 Open the SETUP_FOLDER in VSCODE or CMD
