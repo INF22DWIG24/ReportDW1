@@ -20,8 +20,16 @@ O tema escolhido foi a criaçao de uma API de gestão escolar básica constituid
 
 ## Galeria
 # Swagger IO - OpenAPI 3.0
-<img src="/doc/images/Swagger/swagger_1.png" height="350">
-<img src="/doc/images/Swagger/swagger_2.png" height="300">
+![swagger](/doc/images/Swagger/swagger_1.png "Swagger 1")
+Restantes imagens em [/doc/images/Swagger](https://github.com/INF22DWIG24/ReportDW1/tree/main/doc/images/Swagger)
+
+# Docker
+![docker](/doc/images/Docker/docker_1.png "Docker 1")
+Restantes imagens em [/doc/images/Docker](https://github.com/INF22DWIG24/ReportDW1/tree/main/doc/images/Docker)
+
+# Postman
+![postman](/doc/images/Postman/postman_1.png "Postman 1")
+Restantes imagens em [/doc/images/Postman](https://github.com/INF22DWIG24/ReportDW1/tree/main/doc/images/Postman)
 
 ## Tecnologias
 * [nodeJS](https://nodejs.org/en/)
