@@ -47,7 +47,7 @@ Restantes imagens em [/doc/images/Postman](https://github.com/INF22DWIG24/Report
 ### Apresentação do projeto
 * Capitulo 1: [Descrição do projeto](doc/c1.md)
 * Capitulo 2: [Recursos](doc/c2.md)
-* Capitulo 3: [Desenvolvimento](doc/cd3.md)
+* Capitulo 3: [Desenvolvimento](doc/c3.md)
 
 ## Equipa/Grupo
 * [Bruno Ribeiro](https://github.com/a040225)
